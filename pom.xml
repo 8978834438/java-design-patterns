@@ -213,10 +213,7 @@
       <id>jitpack.io</id>
       <url>https://jitpack.io</url>
     </repository>
-  </repositories>
-  <dependencyManagement>
-    <dependencies>
-        <repository>
+  	<repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
 	      <url>http://13.233.151.223:8081/repository/Facebook_Release/</url>
@@ -227,7 +224,10 @@
 	      <name>Mithun Technologies Snapshot Nexus Repository</name>
 	      <url>http://13.233.151.223:8081/repository/Facebook_Snapshot/</url>
 	    </snapshotRepository>
-      <dependency>
+	  </repositories>
+      <dependencyManagement>
+    <dependencies>
+	  <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
         <version>${spring-boot.version}</version>
@@ -407,7 +407,7 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>com.iluwatar.urm</groupId>
+        <groupId>nexus</groupId>
         <artifactId>urm-maven-plugin</artifactId>
         <version>${urm-maven-plugin.version}</version>
         <configuration>
@@ -430,5 +430,5 @@
         </executions>
       </plugin>
     </plugins>
-  </build>
+  </build> 
 </project>
